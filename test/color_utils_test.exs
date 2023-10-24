@@ -1,5 +1,6 @@
 defmodule ColorUtilsTest do
   use ExUnit.Case, async: true
+
   alias ColorUtils.RGB
   alias ColorUtils.HSV
 
@@ -96,8 +97,8 @@ defmodule ColorUtilsTest do
     triad_colors = ColorUtils.get_triad_colors(color)
     assert length(triad_colors) == 2
     [first, second] = triad_colors
-    assert abs(first.hue - color.hue)  == 90
-    assert abs(second.hue - color.hue)  == 90
+    assert abs(first.hue - color.hue) == 90
+    assert abs(second.hue - color.hue) == 90
   end
 
   test "get triad colors as rgb" do

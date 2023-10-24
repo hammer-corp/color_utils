@@ -5,12 +5,12 @@ defmodule ColorUtils.Mixfile do
     [
       app: :color_utils,
       version: "0.2.1",
-      elixir: "~> 1.0",
-      build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
+      elixir: "~> 1.14",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
       package: package(),
       description: description(),
-      deps: deps(),
+      deps: deps()
     ]
   end
 
